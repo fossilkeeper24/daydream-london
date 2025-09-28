@@ -18,3 +18,5 @@ res://scripts/end_2.gd
 res://scripts/end_3.gd
 res://scenes/end_4.gd
 res://scenes/end_5.gd
+res://scripts/welcome.gd
+res://scenes/welcome.tscn
