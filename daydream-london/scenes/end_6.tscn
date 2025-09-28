@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://1jwybdl4evg8"]
+
+[ext_resource type="Texture2D" uid="uid://dbv3pjofag5o3" path="res://images/end5.png" id="1_8x1sf"]
+
+[node name="end6" type="Node2D"]
+
+[node name="End5" type="Sprite2D" parent="."]
+position = Vector2(961, 543)
+texture = ExtResource("1_8x1sf")
+
+[node name="Camera2D" type="Camera2D" parent="End5"]

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7cgtbrxs6qsc"]
+
+[ext_resource type="Script" uid="uid://b6ykl381kgu4b" path="res://scripts/end_3.gd" id="1_btuxh"]
+[ext_resource type="Texture2D" uid="uid://1r28owvdwn67" path="res://images/end2.png" id="1_o82a1"]
+
+[node name="end3" type="Node2D"]
+script = ExtResource("1_btuxh")
+
+[node name="End2" type="Sprite2D" parent="."]
+position = Vector2(842, 358)
+texture = ExtResource("1_o82a1")
+
+[node name="Camera2D" type="Camera2D" parent="End2"]

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://nak2fnds3h76"]
+
+[ext_resource type="Texture2D" uid="uid://do27nx3a1wl04" path="res://images/end.png" id="1_iblaa"]
+[ext_resource type="Script" uid="uid://cy7fadccx1s0s" path="res://scripts/you_win.gd" id="1_ibln8"]
+
+[node name="you win" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ibln8")
+
+[node name="End" type="Sprite2D" parent="."]
+position = Vector2(601, 319)
+texture = ExtResource("1_iblaa")
+
+[node name="Camera2D" type="Camera2D" parent="End"]

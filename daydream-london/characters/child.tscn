@@ -1,0 +1,66 @@
+[gd_scene load_steps=8 format=3 uid="uid://cn1cvnumcilah"]
+
+[ext_resource type="Texture2D" uid="uid://bna5ief2mbh4p" path="res://images/child.png" id="1_2aij6"]
+[ext_resource type="Script" uid="uid://c8ch6vs7v6rbp" path="res://scripts/child.gd" id="1_fhs4v"]
+[ext_resource type="Texture2D" uid="uid://bxkvv72u5bf1y" path="res://images/death.png" id="2_knbkt"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fhs4v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_knbkt")
+}],
+"loop": false,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2aij6")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2aij6"]
+size = Vector2(208, 199)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_knbkt"]
+size = Vector2(918, 209)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fhs4v"]
+size = Vector2(166, 188)
+
+[node name="child" type="Node2D"]
+
+[node name="child" type="CharacterBody2D" parent="."]
+script = ExtResource("1_fhs4v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="child"]
+sprite_frames = SubResource("SpriteFrames_fhs4v")
+animation = &"idle"
+
+[node name="death" type="Area2D" parent="child"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="child/death"]
+position = Vector2(-13, 88.5)
+shape = SubResource("RectangleShape2D_2aij6")
+
+[node name="run" type="Area2D" parent="child"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="child/run"]
+position = Vector2(-8, 94.5)
+shape = SubResource("RectangleShape2D_knbkt")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="child"]
+position = Vector2(-3, 92)
+shape = SubResource("RectangleShape2D_fhs4v")
+
+[connection signal="body_entered" from="child/death" to="child" method="_on_death_body_entered"]
+[connection signal="body_entered" from="child/run" to="child" method="_on_run_body_entered"]
