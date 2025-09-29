@@ -2,6 +2,8 @@
 > https://fossilkeeper24.itch.io/save-the-kid
 
 desc: save the kid from itself
+A short platformer made during daydream london
+game engine used: godot
 
 ## plot
 A power-hungry kid has detroyed the world due to their greed. You (player) must save them from themselves and prevent further destruction.
