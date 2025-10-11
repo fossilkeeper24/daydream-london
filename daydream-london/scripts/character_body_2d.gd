@@ -25,6 +25,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	move_and_slide()
 	play_anim(current_dir)
+	which_level()
 	
 
 func play_anim(dir):
@@ -52,3 +53,11 @@ func play_anim(dir):
 			anim.play("pot-run")
 		else:
 			anim.play("pot")
+			
+func which_level():
+	var current_scene = str(get_tree().current_scene)
+	if current_scene == "starting area:<Node2D#33873200474>":
+		Globalvars.levelR = 1
+	elif current_scene == "level2:<Node2D#68249716058>":
+		Globalvars.levelR = 2
+	print(current_scene, Globalvars.levelR)

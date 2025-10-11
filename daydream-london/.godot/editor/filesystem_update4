@@ -1,4 +1,3 @@
-res://scenes/level2.tscn
 res://characters/main_char.tscn
 res://scenes/starting_screen.tscn
 res://characters/child.tscn
@@ -11,6 +10,8 @@ res://scenes/end_5.tscn
 res://scenes/end_6.tscn
 res://scenes/welcome.tscn
 res://scenes/failure.tscn
+res://scenes/level2.tscn
+res://globalvars.gd
 res://scripts/character_body_2d.gd
-res://scripts/door.gd
-res://scripts/child.gd
+res://scripts/failure.gd
+res://scripts/spikelvl2.gd
