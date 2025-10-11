@@ -10,16 +10,16 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	levelR = which_level()
+	#levelR = which_level()
 	print(levelR)
 	pass
 	
 func which_level():
 	var level = levelR
 	var current_scene = str(get_tree().current_scene)
-	if current_scene == "starting area:<Node2D#33873200474>":
+	if current_scene.contains("starting area"):
 		level = 1
-	elif current_scene == "level2:<Node2D#68249716058>":
+	elif current_scene.contains("level2"):
 		level = 2
 	print("globals: ", current_scene, " ", level)
 	return level

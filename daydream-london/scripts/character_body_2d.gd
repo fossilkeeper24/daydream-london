@@ -56,8 +56,8 @@ func play_anim(dir):
 			
 func which_level():
 	var current_scene = str(get_tree().current_scene)
-	if current_scene == "starting area:<Node2D#33873200474>":
+	if current_scene.contains("starting area"):
 		Globalvars.levelR = 1
-	elif current_scene == "level2:<Node2D#68249716058>":
+	elif current_scene.contains("level2"):
 		Globalvars.levelR = 2
-	print(current_scene, Globalvars.levelR)
+	print("char script: ", current_scene, Globalvars.levelR)
