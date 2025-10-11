@@ -22,7 +22,7 @@ func _on_death_body_entered(body: Node2D) -> void:
 		$AnimatedSprite2D.hide()
 		$death.hide()
 		$run.hide()
-		$CollisionShape2D2.hide()
+		$CollisionShape2D2.set_deferred("disabled",true)
 		
 
 

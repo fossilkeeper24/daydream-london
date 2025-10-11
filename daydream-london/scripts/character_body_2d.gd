@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 
-const SPEED = 400.0
-const JUMP_VELOCITY = -500.0
+const SPEED = 900.0
+const JUMP_VELOCITY = -550.0
 @onready var current_dir = "none"
 @onready var child_gotten = Globalvars.child_gotten
 

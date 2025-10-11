@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyoivj0dgffuf"]
+
+[ext_resource type="Script" uid="uid://d0gw5lslckb18" path="res://scripts/failure.gd" id="1_m47r0"]
+[ext_resource type="Texture2D" uid="uid://cllkjsriucgr0" path="res://images/failure.png" id="1_sf880"]
+[ext_resource type="Texture2D" uid="uid://3ee58e8ekyt0" path="res://images/try again.png" id="2_i57f3"]
+
+[node name="failure" type="Node2D"]
+script = ExtResource("1_m47r0")
+
+[node name="Failure" type="Sprite2D" parent="."]
+position = Vector2(587, 357)
+texture = ExtResource("1_sf880")
+
+[node name="Camera2D" type="Camera2D" parent="Failure"]
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 718.0
+offset_top = -275.0
+offset_right = 1521.0
+offset_bottom = 460.0
+texture_normal = ExtResource("2_i57f3")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
